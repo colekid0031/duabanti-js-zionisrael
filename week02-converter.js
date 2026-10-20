@@ -7,7 +7,6 @@ function cedisToDollars(cedis) {
   Dollars = Dollars.toFixed(2);
   return Dollars;
  }
- console.log(cedisToDollars(cedis))
 // KM TO M 
 function kmToMiles(km) { 
 let Miles = km *  0.621371;
