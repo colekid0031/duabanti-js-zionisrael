@@ -10,9 +10,9 @@ function cedisToDollars(cedis) {
  console.log(cedisToDollars(cedis))
 // KM TO M 
 function kmToMiles(km) { 
-let miles = km *  0.621371;
-miles = miles.toFixed
-return miles;
+let Miles = km *  0.621371;
+Miles = Miles.toFixed(2);
+return Miles;
 }
 // celsius to F
 function celsiusToFahrenheit(celsius) {
