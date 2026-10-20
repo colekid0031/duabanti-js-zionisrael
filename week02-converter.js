@@ -20,5 +20,5 @@ function celsiusToFahrenheit(celsius) {
     return Fahrenheit;
  }
  console.log (`GH₵${cedis} equals about $${cedisToDollars(cedis)} USD`)
- console.log (`${km} equals to about ${kmToMiles(km)} Miles`)
+ console.log (`${km} kilometers equals to about ${kmToMiles(km)} Miles`)
  console.log (`${celsius} Degrees celsius is equals to about $${celsiusToFahrenheit(celsius)} Fahrenheit`)
