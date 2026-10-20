@@ -14,12 +14,3 @@ let miles = km *  0.621371;
 miles = miles.toFixed
 return miles;
 }
-// celsius to F
-function celsiusToFahrenheit(celsius) {
-    let Fahrenheit = celsius * 1.8 + 32;
-    Fahrenheit = Fahrenheit.toFixed(2);
-    return Fahrenheit;
- }
- console.log (`GH₵${cedis} equals about $${cedisToDollars(cedis)} USD`)
- console.log (`${km} equals about ${kmToMiles(km)} Miles`)
- console.log (`${celsius} Degrees celsius is equals to about $${celsiusToFahrenheit(celsius)} Fahrenheit`)
