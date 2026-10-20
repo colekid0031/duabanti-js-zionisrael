@@ -1,5 +1,5 @@
-const cedis = 533333;
-const celsius = 50;
+const cedis = 2001;
+const celsius = 39;
 const km = 50;
 //  CD TO USD 
 function cedisToDollars(cedis) {
@@ -20,5 +20,5 @@ function celsiusToFahrenheit(celsius) {
     return Fahrenheit;
  }
  console.log (`GH₵${cedis} equals about $${cedisToDollars(cedis)} USD`)
- console.log (`${km} kilometers equals to about ${kmToMiles(km)} Miles`)
- console.log (`${celsius} Degrees celsius is equals to about $${celsiusToFahrenheit(celsius)} Fahrenheit`)
+ console.log (`${km} kilometers equals to ${kmToMiles(km)} Miles`)
+ console.log (`${celsius}°C Degrees celsius is equals to $${celsiusToFahrenheit(celsius)}°F Fahrenheit`)
