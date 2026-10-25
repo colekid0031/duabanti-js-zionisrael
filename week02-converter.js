@@ -4,7 +4,7 @@ const km = 50;
 //  CD TO USD 
 function cedisToDollars(cedis) {
   let Dollars = cedis * 0.085;
-  Dollars = Dollars.toFixed(2);
+  Dollars = Dollars.toFixed(2); 
   return Dollars;
  }
 // KM TO M 
