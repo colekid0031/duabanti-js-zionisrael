@@ -85,9 +85,7 @@ function moneydiffrence(moneyLeft, spendLimit) {
 
     const showAvaliableItems = expenses.filter((A) => A.isAvalible === true)
 
-    function itemInfo(expense, index){
-        return expense[index];
-    }
+
 function updateMoney(moneyAmounts, downValue, Up) {
   if (Up === true) {
     return moneyAmounts.map(M => ({ money: M.money + downValue }));
@@ -105,10 +103,10 @@ function buyItem(money, expense, index) {
 }
 
 
-while (5 > 0) {
-    console.log(isOverBudget(moneyAmount[0].money, spendLimits, moneydiffrence));
+// while (5 > 0) {
+//     console.log(isOverBudget(moneyAmount[0].money, spendLimits, moneydiffrence));
 
-}
+// }
 
 // ALL CALLS GO BELOW HERE |S
 console.log(`Updated from ${expenses.length} Items to `, addExpense(extraExpenses, expenses), `Items to buy`);
@@ -117,4 +115,6 @@ console.log(isAvalible, showAvaliableItems)
 // use only if array has been updated
 console.log(buyItem(moneyAmount[0].money, updatedExpenses, itemToBuy));
 // console.log(getMostExpensive(expenses)); 
+console.log(isOverBudget(moneyAmount[0].money, spendLimits, moneydiffrence));
+
 console.log(moneydiffrence(moneyAmount[0].money, spendLimits));
