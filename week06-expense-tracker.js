@@ -5,7 +5,7 @@
  }]
 // varibles  
 const spendLimits = 10000;
-let moneySpent = 0;
+const itemToBuy = 14;
 // end Of varaibles
  const extraExpenses =[
     {type: `Food` ,item: `IceCream`, price: 7 , isAvalible: true, stock: 289},
@@ -46,13 +46,11 @@ function getMostExpensive(item) {
   });
 }
 
-function addExpense(expense ,expenses){
-    const newExpense = expenses.push(
-        expense[0], expense[1], expense[2], expense[3],
-    )
-        return newExpense;
+function addExpense(expense, expenses) {
+  expenses.push(...expense); 
+  return expenses;
 }
-
+const updatedExpenses = addExpense(extraExpenses, expenses);
 
 
 function isOverBudget(moneyLeft, spendLimit, moneydiffrence){
@@ -90,42 +88,33 @@ function moneydiffrence(moneyLeft, spendLimit) {
     function itemInfo(expense, index){
         return expense[index];
     }
+function updateMoney(moneyAmounts, downValue, Up) {
+  if (Up === true) {
+    return moneyAmounts.map(M => ({ money: M.money + downValue }));
+  } else {
+    return moneyAmounts.map(M => ({ money: M.money - downValue }));
+  }
+}
 
-    function updateMoney(moneyAmounts, downValue, Up) {
-      if (Up === true) {
-        return moneyAmounts.map(M => ({ money: M.money + downValue }));
-      } else {
-        return moneyAmounts.map(M => ({ money: M.money - downValue }));
-       }
-    }
-
-      return  moneyAmount = updateMoney(moneyAmount, expenses[5].price, false); 
-
-console.log(moneyAmount);
-function buyItem(money, expense, index){
-        let itemPrice = expense[index].price
-        let Money = money - itemPrice;
-        return Money, itemPrice, `You've bought ${expense[index].item} for ${ formattedMoney(itemPrice) } only ${formattedMoney(Money)} Remaining.` 
-    }
+function buyItem(money, expense, index) {
+  let itemPrice = expense[index].price;
+  let remainingMoney = money - itemPrice;
+    moneyAmount = updateMoney(moneyAmount, itemPrice, false);
+  
+  return `You've bought ${expense[index].item} for ${formattedMoney(itemPrice)} only ${formattedMoney(remainingMoney)} Remains.`;
+}
 
 
+while (5 > 0) {
+    console.log(isOverBudget(moneyAmount[0].money, spendLimits, moneydiffrence));
 
-
-
-
-
-
-
-
-// console.log(buyItem(moneyAmount[0], expenses))
-let index = 5;
-// console.log(buyItem(moneyAmount, expenses, 5));
-
-// console.log(buyItem(moneyAmount.money, extraExpenses));
+}
 
 // ALL CALLS GO BELOW HERE |S
-// console.log(isAvalible, showAvaliableItems)
-// console.log(`Updated from ${expenses.length} Items to `, addExpense(extraExpenses, expenses), `Items to buy`);
+console.log(`Updated from ${expenses.length} Items to `, addExpense(extraExpenses, expenses), `Items to buy`);
+console.log(isAvalible, showAvaliableItems)
+// console.log(buyItem(moneyAmount[0].money, expenses, itemToBuy));
+// use only if array has been updated
+console.log(buyItem(moneyAmount[0].money, updatedExpenses, itemToBuy));
 // console.log(getMostExpensive(expenses)); 
-// console.log(isOverBudget(moneyAmount[0].money, spendLimits, moneydiffrence));
-// console.log(moneydiffrence(moneyAmount[0].money, spendLimits));
+console.log(moneydiffrence(moneyAmount[0].money, spendLimits));

@@ -46,10 +46,6 @@ function formatExpense(){
 function getTotalSpending(){
     <!-- code that shows all purchases, what you bought how much it cost in order from most expensive to least expensive -->
 }
-function getTotalSpendingByCategory(){
-    <!-- code that allows you to pick if you want your spent data on phyical items or other things -->
-}
-
 function getMostExpensive(){
 <!-- code it just shows the most expensive item you can buy -->
 }
